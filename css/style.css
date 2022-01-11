@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --blue-background: #1C8EA8;
+    --bloc-center: #6a6a6a;
+    --bloc-center-op-75: #7a505075;
+    --bloc-center-op-90: #6a6a6a90;
+    --blue-fonce: #071F4D;
+    --color-white: white;
+    --color-black: black;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --blanc-casse: #EEEEEE;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+section#case-connect{
+    width: 50vw;
+    height: 50vh;
+    background-color: var(--bloc-center-op-75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.identifiant,
+div.password{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    width: 25vw;
+}
+
+div.link-account{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 35px;
+    top: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+div.link-detail{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+}
+
+i#icon-return{
+    color: var(--color-white);
+    font-size: 35px;
+}
+
+div.grid-connexion{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    row-gap: 15px;
+}
+
+label.label-form{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input.input-connect{
+    height: 25px;
+}
+
+div.submit{
+    display: flex;
+    justify-content: center;
+}
+
+button.boutton-connect{
+    width: 10vw;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--blue-fonce);
+    color: var(--color-white);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: var(--font-montserrat);
+}
+
+section#grid-dashboard{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+}
+
+div.sidebar_menu{
+    width: 300px;
+    background-color: var(--blanc-casse);
+    position: fixed;
+}
+
+div.profil{
+    width: 100%;
+    height: 20vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.rond-icon{
+    background-color: var(--bloc-center);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.icon-profil{
+    width: 80px;
+    height: 80px;
+}
+
+div.coordonnees{
+    margin-top: 10px;
+}
+
+div.coordonnees span{
+    font-family: var(--font-montserrat);
+}
+
+li.nav-item{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+span.menu-title{
+    font-family: var(--font-montserrat);
+}
+
+nav.sidebar{
+    height: calc(80vh - 20px);
+    display: flex;
+    align-items: center;
+}
+
+ul.nav{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    row-gap: 25px;
+}
+
+a.nav-link{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+li.nav-item.active{
+    background-color: var(--blue-background);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 0px 35px 35px 0px;
+}
+
+li.nav-item.active a.nav-link{
+    color: var(--color-white);
+}
+
+div.contain,
+div.contain-detail{
+    width: calc(100vw - 300px);
+    margin-left: 300px;
+}
+
+div.bar-title{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    margin-top: 50px;
+}
+
+h2.title,
+h2.title-ajout,
+h2.title-produits{
+    color: var(--color-white);
+    font-size: 2rem;
+    font-family: var(--font-montserrat);
+    margin-left: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2.title-ajout{
+    margin-top: 25px;
+}
+
+h2.title-produits{
+    width: 30vw;
+}
+
+div.case-plus{
+    margin-left: 25px;
+    width: 75px;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.case-plus-produits{
+    width: 75px;
+    display: flex;
+    align-items: center;
+}
+
+div.case-plus a,
+div.case-plus-produits a{
+    text-decoration: none;
+}
+
+i#plus-boutton{
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+div.form-recherche{
+    display: flex;
+    align-items: center;
+}
+
+div.form-recherche form{
+    right: 25px;
+    /* background-color: pink; */
+    position: absolute;
+}
+
+input.input-recherche{
+    border: none;
+    border-bottom: 2px solid var(--color-white);
+    font-family: var(--font-montserrat);
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+input.input-recherche::placeholder{
+    color: rgba(255, 255, 255, 0.726);
+    font-family: var(--font-montserrat);
+    font-style: italic;
+}
+
+button.boutton-recherche{
+    background-color: var(--blue-fonce);
+    border-radius: 15px;
+    border: none;
+    color: var(--color-white);
+    padding: 12px 20px 12px 20px;
+    font-family: var(--font-montserrat);
+    cursor: pointer;
+}
+
+div.grid-employes{
+    width: calc(100% - 50px);
+    height: 60vh;
+    /* background-color: red; */
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    row-gap: 5px;
+    margin-top: 60px;
+}
+
+div.grid-info{
+    background-color: var(--bloc-center);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+}
+
+div.grid-info span{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+}
+
+div.case-icon{
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+}
+
+div.case-icon i,
+div.case-icon-categories i{
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+div.case-flex-pagination{
+    width: 100%;
+    height: 40px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+div.pagination{
+    display: flex;
+    width: max-content;
+    border-radius: 15px;
+    background-color: var(--bloc-center-op-75);
+}
+
+div.nombre-page{
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+div.nombre-page span{
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+}
+
+div.nombre-page span a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+span.indicateur{
+    position: absolute;
+    bottom: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}
+
+div.contain-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.card-details{
+    width: 75%;
+    background-color: var(--bloc-center);
+    height: 60vh;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+div.grid-card-details-1{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img.icon-details{
+    height: 150px;
+}
+
+div.designation-details{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    column-gap: 25px;
+}
+
+div.designation-details span{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+}
+
+div.poste-details{
+    margin-top: 15px;
+}
+
+div.poste-details span{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+}
+
+div.grid-card-details-2{
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: repeat(7,1fr);
+    row-gap: 10px;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+div.info-details{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+}
+
+div.swiper{
+    width: 85%;
+    height: 70vh;
+    background-color: var(--bloc-center-op-90);
+}
+
+span.swiper-pagination-bullet-active{
+    background-color: var(--color-white);
+}
+
+div.flex-form-ajout{
+    display: flex;
+    justify-content: center;
+}
+
+div.flex-form-ajout-categories{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bloc-center-op-90);
+    width: 85%;
+    height: 70vh;
+}
+
+div.grid-form-ajout{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    margin-top: 30px;
+    row-gap: 25px;
+    column-gap: 10vw;
+    grid-auto-flow: column;
+}
+
+div.form-employes-ajout,
+div.form-employes-ajout-categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+div.label-form{
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+}
+
+label.designation-form{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+    font-size: 1.2rem;
+}
+
+div.label-form select{
+    height: 25px;
+    font-family: var(--font-montserrat);
+}
+
+div.label-form input{
+    height: 20px;
+    font-family: var(--font-montserrat);
+}
+
+button.boutton-ajout,
+button.boutton-modifier{
+    background-color: var(--blue-fonce);
+    border: none;
+    border-radius: 25px;
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+div.case-password{
+    display: flex;
+}
+
+i#generMP{
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+div.grid-image-profil{
+    display: flex;
+    position: relative;
+}
+
+input.imageRecup{
+    width: 9vw;
+    position: absolute;
+    right: 0;
+}
+
+div.card-categories{
+    width: 350px;
+    height: 150px;
+    background-color: var(--bloc-center);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3.title-categories{
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+}
+
+div.grid-categories{
+    width: calc(100% - 8%);
+    display: grid;
+    padding-top: 20px;
+    padding-left: 8%;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    row-gap: 15px;
+    column-gap: 60px;
+    /* background-color: red; */
+}
+
+div.case-icon-categories{
+    display: flex;
+    justify-content: space-between;
+    width: 5vw;
+}
+
+div.boutton-ajout-categories{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}

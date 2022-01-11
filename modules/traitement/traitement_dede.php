@@ -6,8 +6,13 @@ include("C:/Users/Siegfried/Downloads/laragon/www/formulaire_dede/modules/connex
 
 <?php 
 
-$pseudo = $_POST['pseudo'];
-$score = $_POST['score'];
+$base = json_decode(file_get_contents("php://input"), true);
+
+// $pseudo = $_POST['pseudo'];
+// $score = $_POST['score'];
+print_r($base);
+$pseudo = $base['pseudo'];
+$score = $base['score'];
 
 $sql = "INSERT INTO table_dede (`pseudo`, `score`) VALUES (:pseudo, :score)";
 try{
@@ -34,6 +39,6 @@ catch (PDOException $e){
 
 <?php
 
-header('location:http://localhost/formulaire_dede/index.php');
+// header('location:http://localhost/formulaire_dede/index.php');
 
 ?>
